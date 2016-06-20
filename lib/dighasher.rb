@@ -1,6 +1,7 @@
 require "dighasher/version"
 require "dighasher/digest_generator"
 
+# Hash Generate Module
 module Dighasher
 
   # Hash Generate Class
