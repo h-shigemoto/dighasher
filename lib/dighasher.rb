@@ -20,6 +20,17 @@ module Dighasher
       @base_str = str
     end
 
+    # change hash mode.
+    # @param [integer] mode Hash mode. DigestGenerator::Xxxx constant.
+    # @param [integer] bitlen SHA2 bitlength. 256 or 384 or 512.
+    def change_mode(mode, bitlen=256)
+
+      # generate new digest instance
+      @digest = DigestGenerator::generate_digest(mode, @base_str, bitlen)
+      @mode = mode
+      @bitlen = bitlen
+    end
+
     # update hash target string.
     # @param [String] str update string
     def update(str)

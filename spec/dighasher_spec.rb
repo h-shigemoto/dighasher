@@ -17,6 +17,18 @@ describe Dighasher do
     expect(hash).to be_truthy
   end
 
+  it 'change hash mode' do
+    generator = Dighasher::Generator.new(DigestGenerator::SHA256, "change_mode")
+    hash1 = generator.generate_hash
+    # puts hash1
+    generator.change_mode(DigestGenerator::MD5)
+    hash2 = generator.generate_hash
+    # puts hash2
+    expect(hash1).not_to eq hash2
+    expect(generator.equals("change_mode"))
+    expect(generator.mode).to eq DigestGenerator::MD5
+  end
+
   it 'generate hash test temporary add str' do
     generator = Dighasher::Generator.new(DigestGenerator::SHA256, "sha256")
     hash = generator.generate_hash(false, "temporary")
