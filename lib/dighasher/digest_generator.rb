@@ -16,6 +16,11 @@ module DigestGenerator
   # SHA2 Hash Constant
   SHA2 = 5
 
+  # get available hash.
+  def self.available
+    "Digest::MD5, Digest::SHA1, Digest::SHA256, Digest::SHA512, Digest::SHA2(256, 384, 512)"
+  end
+
   # generate digest instance.
   # @param [integer] mode Hash mode. use DigestGenerator constant.
   # @param [String] str target string

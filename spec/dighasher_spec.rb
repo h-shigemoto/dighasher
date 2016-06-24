@@ -133,4 +133,9 @@ describe Dighasher do
     generator.update(nil)
     expect(generator.base_str).to be_falsey
   end
+
+  it 'available test' do
+    available = Dighasher.available
+    expect(available).to eq "Digest::MD5, Digest::SHA1, Digest::SHA256, Digest::SHA512, Digest::SHA2(256, 384, 512)"
+  end
 end

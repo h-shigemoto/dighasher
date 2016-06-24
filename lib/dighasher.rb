@@ -144,4 +144,9 @@ module Dighasher
       temp_digest
     end
   end
+
+  # get available hash.
+  def self.available
+    DigestGenerator.available
+  end
 end

@@ -37,4 +37,9 @@ describe DigestGenerator do
     digest = DigestGenerator.generate_digest(10000, "nil digest")
     expect(digest).to be_falsey
   end
+
+  it 'available test' do
+    available = DigestGenerator.available
+    expect(available).to eq "Digest::MD5, Digest::SHA1, Digest::SHA256, Digest::SHA512, Digest::SHA2(256, 384, 512)"
+  end
 end
