@@ -28,7 +28,7 @@ This sample generate hash by MD5.
 ```ruby
 require 'dighasher'
 
-generator = Dighasher::Generator.new(DigestGenerator::MD5, "hash target string.")
+generator = Dighasher::Generator.new(Dighasher::DigestGenerator::MD5, "hash target string.")
 
 # generate hash.
 hash = generator.generate_hash

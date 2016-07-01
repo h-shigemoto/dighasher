@@ -14,7 +14,7 @@ module Dighasher
     def initialize(mode, str=nil, bitlen=256)
 
       # generate digest instance
-      @digest = DigestGenerator::generate_digest(mode, str, bitlen)
+      @digest = Dighasher::DigestGenerator::generate_digest(mode, str, bitlen)
       @mode = mode
       @bitlen = bitlen
       @base_str = str
@@ -26,7 +26,7 @@ module Dighasher
     def change_mode(mode, bitlen=256)
 
       # generate new digest instance
-      @digest = DigestGenerator::generate_digest(mode, @base_str, bitlen)
+      @digest = Dighasher::DigestGenerator::generate_digest(mode, @base_str, bitlen)
       @mode = mode
       @bitlen = bitlen
     end
@@ -63,7 +63,7 @@ module Dighasher
       # if exist temporary add string, dup @digest and add str.
       eq_digest = get_temporary_digest(temp_add_str)
       # generate compare digest instance.
-      comp_digest = DigestGenerator.generate_digest(@mode, str, @bitlen)
+      comp_digest = Dighasher::DigestGenerator.generate_digest(@mode, str, @bitlen)
 
       # compare hex digest value.
       return eq_digest == comp_digest.hexdigest
@@ -147,6 +147,6 @@ module Dighasher
 
   # get available hash.
   def self.available
-    DigestGenerator.available
+    Dighasher::DigestGenerator.available
   end
 end
