@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 # Dighasher::DigestGenerator spec
-describe Dighasher do
+describe Dighasher::DigestGenerator do
 
   it 'generate md5 digest instance' do
     digest = Dighasher::DigestGenerator.generate_digest(Dighasher::DigestGenerator::MD5, "md5")
