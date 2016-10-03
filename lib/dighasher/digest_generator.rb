@@ -21,7 +21,7 @@ module Dighasher
 
     # get available hash.
     def self.available
-      "Digest::MD5, Digest::SHA1, Digest::SHA256, Digest::SHA512, Digest::SHA2(256, 384, 512)"
+      "Digest::MD5, Digest::SHA1, Digest::SHA2(256, 384, 512)"
     end
 
     # generate digest instance.
@@ -39,11 +39,7 @@ module Dighasher
         digest = Digest::MD5.new
       when SHA1 then
         digest = Digest::SHA1.new
-      when SHA256 then
-        digest = Digest::SHA256.new
-      when SHA512 then
-        digest = Digest::SHA512.new
-      when SHA2 then
+      when SHA256, SHA512, SHA2 then
         digest = Digest::SHA2.new(bitlen)
       else
         digest = nil

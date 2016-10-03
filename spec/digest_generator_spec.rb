@@ -40,6 +40,6 @@ describe Dighasher::DigestGenerator do
 
   it 'available test' do
     available = Dighasher::DigestGenerator.available
-    expect(available).to eq "Digest::MD5, Digest::SHA1, Digest::SHA256, Digest::SHA512, Digest::SHA2(256, 384, 512)"
+    expect(available).to eq "Digest::MD5, Digest::SHA1, Digest::SHA2(256, 384, 512)"
   end
 end

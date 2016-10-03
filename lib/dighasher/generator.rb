@@ -12,10 +12,11 @@ module Dighasher
     # @param [integer] bitlen SHA2 bitlength. 256 or 384 or 512.
     def initialize(mode, str=nil, bitlen=256)
 
-      # generate digest instance
-      @digest = Dighasher::DigestGenerator::generate_digest(mode, str, bitlen)
-      @mode = mode
       @bitlen = bitlen
+      set_bitlen(mode)
+      # generate digest instance
+      @digest = Dighasher::DigestGenerator::generate_digest(mode, str, @bitlen)
+      @mode = mode
       @base_str = str
     end
 
@@ -128,6 +129,19 @@ module Dighasher
     end
 
     private
+
+    # set bitlen
+    # @param [integer] mode Hash mode. DigestGenerator::Xxxx constant.
+    def set_bitlen(mode)
+
+      # set bitlen
+      case mode
+      when DigestGenerator::SHA256 then
+        @bitlen = 256
+      when DigestGenerator::SHA512 then
+        @bitlen = 512
+      end
+    end
 
     # get temporary digest(dup @digest) and add string.
     # @param [String] temp_add_str temporary additional string.

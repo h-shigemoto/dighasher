@@ -3,7 +3,7 @@
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/dighasher`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 This gem provide generate hash method.
-Hash algorithm, MD5, SHA1, SHA256, SHA512, SHA2.
+Hash algorithm, MD5, SHA1, SHA2(256, 384, 512).
 
 ## Installation
 

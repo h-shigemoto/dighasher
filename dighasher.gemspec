@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["h.shigemoto"]
   spec.email         = ["corporation.ore@gmail.com"]
   spec.summary       = %q{This gem is generate hash. Use digest lib.}
-  spec.description   = %q{This gem is generate hash. Use digest lib. Digest use MD5, SHA1, SHA256, SHA512, SHA2.}
+  spec.description   = %q{This gem is generate hash. Use digest lib. Digest use MD5, SHA1, SHA2(256, 384, 512).}
   spec.homepage      = "https://github.com/h-shigemoto/dighasher"
   spec.license       = "MIT"
 
