@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["corporation.ore@gmail.com"]
   spec.summary       = %q{This gem is generate hash. Use digest lib.}
   spec.description   = %q{This gem is generate hash. Use digest lib. Digest use MD5, SHA1, SHA2(256, 384, 512).}
-  spec.homepage      = "https://github.com/h-shigemoto/dighasher"
+  spec.homepage      = "https://github.com/koyupi/dighasher"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
