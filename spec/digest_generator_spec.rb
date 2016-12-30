@@ -33,9 +33,8 @@ describe Dighasher::DigestGenerator do
     expect(digest).to be_truthy
   end
 
-  it 'generate nil' do
-    digest = Dighasher::DigestGenerator.generate_digest(10000, "nil digest")
-    expect(digest).to be_falsey
+  it 'generate other mode' do
+    expect{ digest = Dighasher::DigestGenerator.generate_digest(10000, "nil digest") }.to raise_error(TypeError)
   end
 
   it 'available test' do

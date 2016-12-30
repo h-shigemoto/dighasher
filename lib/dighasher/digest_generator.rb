@@ -42,7 +42,8 @@ module Dighasher
       when SHA256, SHA512, SHA2 then
         digest = Digest::SHA2.new(bitlen)
       else
-        digest = nil
+        # raise error.
+        raise TypeError.new("invalid mode : #{mode}")
       end
 
       # set str

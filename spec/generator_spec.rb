@@ -3,7 +3,7 @@ require 'spec_helper'
 # Dighasher::Generator spec.
 describe Dighasher::Generator do
 
-  it 'generate Generator instance' do
+  it 'generate generator instance' do
     generator = Dighasher::Generator.new(Dighasher::DigestGenerator::MD5, "md5")
     expect(generator).to be_truthy
   end
